@@ -1,5 +1,6 @@
+import { PublicKey, Connection } from "@solana/web3.js";
 async function getBalanceUsingWeb3(address: PublicKey): Promise<number> {
-    const connection = new Connection(clusterApiUrl('devnet'));
+    const connection = new Connection("https://api.devnet.solana.com");
     return connection.getBalance(address);
 }
 
