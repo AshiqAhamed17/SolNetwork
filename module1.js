@@ -1,4 +1,4 @@
-import { PublicKey, Connection } from "@solana/web3.js";
+import { PublicKey, Connection, LAMPORTS_PER_SOL } from "@solana/web3.js";
 
 // Function to get balance using the provided public key
 async function getBalanceUsingWeb3(publicKey) {
@@ -11,7 +11,7 @@ const publicKey = new PublicKey('7UsN2ocFdUA89xp5KQ3eterTnChJreXgmuhaoyaKqxG7');
 
 // Call the function and print the balance
 getBalanceUsingWeb3(publicKey).then(balance => {
-    console.log('Balance:', balance);
+    console.log('Balance:', balance / LAMPORTS_PER_SOL + "SOL");
 }).catch(error => {
     console.error("Error fetching balance:", error);
 });
