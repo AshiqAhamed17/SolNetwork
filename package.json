@@ -1,10 +1,15 @@
 {
   "name": "solnetwork",
   "version": "1.0.0",
+  "type": "module",
   "description": "Solana Development Course-Read Data From The Solana Network",
   "main": "module1.js",
   "scripts": {
+    "start": "node module1.js",
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "dependencies": {
+    "@solana/web3.js": "^1.0.0"
   },
   "keywords": [],
   "author": "",
